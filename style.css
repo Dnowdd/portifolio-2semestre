@@ -1,0 +1,230 @@
+body,html,*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    position: relative;
+}
+main{
+    width: 100%;
+    /* height: 500vh; */
+    
+    display: block;
+    overflow-y: scroll;
+    max-height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+.page{
+    background-color: white;
+    width: auto;
+    height: 100vh;
+
+    scroll-snap-align: center;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 28px;
+
+    position: relative;
+}
+.font-1{
+    font-size: 18px;
+}
+.vertical-1{
+    width: 450px;
+    margin: 0 auto;
+}
+.title{
+    font-size: 64px;
+    font-weight: 900;
+}
+
+
+.summary-list{
+    list-style-type: upper-roman !important;
+    width: 90vw;
+}
+.summary-list a{
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.summary-list li{
+    width: 70%;
+}
+.summary-list .li{
+    width: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+}
+.ellipsis{
+    display: inline;
+    border-bottom: 1px dotted black;
+}
+
+.content .text{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.button{
+    padding: 16px 12px;
+    width: 30%;
+    margin: 0 auto;
+
+    border: black solid thin;
+    border-radius: 3000px;
+
+    color: black;
+    text-decoration: none;
+
+    transition: .3s;
+}
+.button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+.pageNumber{
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+}
+
+.anchor{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+
+    z-index: 9999;
+
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: thin solid black;
+
+    text-decoration: none;
+    color: black;
+
+    transition: .3s;
+}
+.anchor:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 1850px){
+    .button{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .header{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .title{
+        font-size: 50px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .button{
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    .summary-list li{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .button{
+        width: 85%;
+    }
+    .content .text{
+        width: 90%;
+    }
+    .title{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .summary-list a{
+        font-size: 22px;
+        margin-top: 40px;
+    }
+    .header{
+        width: 80%;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .content .text{
+        font-size: 24px;
+        width: 80%;
+
+        text-align: justify;
+    }
+    .button{
+        width: 80%;
+        padding: 32px 32px;
+    }
+    .title{
+        font-size: 40px;
+    }
+
+    .summary-list > a > li > .li > span:first-child{
+        max-width: 300px;
+
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media only screen and (max-width: 650px){
+    .button{
+        width: 90%;
+        margin-top: 50px;
+    }
+    .anchor{
+        left: 20px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .summary-list > a > li > .li > span:first-child{
+        max-width: 150px;
+    }
+}

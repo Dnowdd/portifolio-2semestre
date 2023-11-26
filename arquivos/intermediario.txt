@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main()
+
+{
+	int x, a, b, c;
+	float area;  
+	printf("### CALCULADORA DE ÁREA GEOMÉTRICA ###\n");
+	printf("Qual a forma geometrica que deseja calcular a area?\n1. Quadrado\n2. Retângulo\n3. Triângulo\n4. Trapêzio  \n");
+	scanf("%d", &x);
+	
+	switch(x){
+    	case 1:
+    		printf("Qual a medida do lado do quadrado? \n");
+    		scanf("%d", &a);
+    		printf("Qual a medida da altura do quadrado? \n");
+    		scanf("%d", &b);
+    		area = a * b; 
+    	
+    		printf("A area do quadrado e: %.2f", area);
+    		break;
+    	
+    	case 2:
+    		printf("Qual a medida da altura do retangulo? \n");
+    		scanf("%d", &a);
+    		printf("Qual a medida do comprimento do retangulo? \n");
+    		scanf("%d", &b);
+    		area = a * b; 
+    	
+    		printf("A area do retangulo e: %.2f", area);
+    		break;
+    	case 3:
+    		printf("Qual a medida da altura do triangulo? \n");
+    		scanf("%d", &a);
+    		printf("Qual a medida da base do triangulo? \n");
+    		scanf("%d", &b);
+    		area = (a * b)/2; 
+    	
+    		printf("A area do triangulo e: %.2f", area);
+    		break;
+    	case 4:
+    		printf("Qual a medida da base maior do trapêzio? \n");
+    		scanf("%d", &a);
+    		printf("Qual a medida da base menor do trapêzio? \n");
+    		scanf("%d", &b);
+    		printf("Qual a medida da altura do trapêzio? \n");
+    		scanf("%d", &c);
+    	
+    		area = ((a + b)*c)/2; 
+    	
+    		printf("A área do trapêzio e: %.2f", area);
+    		break;
+    		
+    		
+    	default: puts("Opção inválida!");
+    }
+	return 0; 
+}
